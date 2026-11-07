@@ -1,0 +1,25 @@
+---
+// src/components/SocialProof.astro
+const testimonials = [
+  { quote: "We had 200 signups in week one. The fastest launch we've ever done.", author: "Jane Doe", role: "Founder, Acme Inc." },
+  { quote: "No backend, no headaches. Just a clean page that converts.", author: "John Smith", role: "Product Lead, TechCorp" },
+];
+---
+<section class="bg-slate-50 py-16 border-y border-slate-200">
+  <div class="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+    <p class="text-center text-sm font-semibold text-slate-500 uppercase tracking-wider mb-8">
+      Trusted by early-stage teams
+    </p>
+    <div class="grid gap-6 md:grid-cols-2">
+      {testimonials.map((t) => (
+        <div class="rounded-xl bg-white p-6 shadow-sm border border-slate-200">
+          <p class="text-slate-700 italic">"{t.quote}"</p>
+          <div class="mt-4">
+            <p class="font-semibold text-slate-900">{t.author}</p>
+            <p class="text-sm text-slate-500">{t.role}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

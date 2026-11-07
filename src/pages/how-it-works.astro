@@ -1,0 +1,14 @@
+---
+// src/pages/how-it-works.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="How it works — Product" description="Learn how to get started with Product in 3 simple steps.">
+  <Navbar />
+  <main class="py-16 md:py-24">
+    <HowItWorks />
+  </main>
+  <Footer />
+</BaseLayout>

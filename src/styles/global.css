@@ -1,0 +1,41 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Latar belakang pola grid halus yang eye-catching */
+  body {
+    background-color: #ffffff;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Offset anchor target di bawah navbar sticky (tinggi navbar ~72px) */
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #2563eb, #7c3aed);
+  }
+}

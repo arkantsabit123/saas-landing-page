@@ -85,6 +85,12 @@ verify-*.py
 setup_project.py
 structure.py
 
+# Hide local testing / troubleshooting scripts
+check_navbar.py
+screenshot_lighthouse.py
+test_api.py
+troubleshoot.py
+
 # Hide verification folder (keep local)
 verification/
 !verification/.gitkeep
@@ -94,11 +100,16 @@ verification_report.txt
 *_verification.json
 phase*_verification.json
 
+# Hide screenshots (local verification only — not part of source)
+# screenshots/
+# !screenshots/.gitkeep
+
 # ============================================
 # JSON Files (hidden except project essentials)
 # ============================================
 *.json
 !package.json
+!package-lock.json
 !tsconfig.json
 !appsscript.json
 

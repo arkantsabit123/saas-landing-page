@@ -2,7 +2,7 @@
 
 ## Conversion-Focused Landing Page for SaaS Product Launches
 
-[![Status](https://img.shields.io/badge/status-v1.0.0%20SCAFFOLD-yellow)](https://github.com/arkantsabit123/saas-landing-page)
+[![Status](https://img.shields.io/badge/status-v1.0.0%20PRODUCTION%20READY-brightgreen)](https://github.com/arkantsabit123/saas-landing-page)
 [![Astro](https://img.shields.io/badge/Astro-4.x-BC52EE)](https://astro.build/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org/)
@@ -40,7 +40,7 @@ The site is delivered as a **static, CDN-hosted build** via Astro and Tailwind C
 - **9 Sections:** Navbar, Hero, Social Proof, Features, How It Works, Pricing, FAQ, Lead Form, Footer.
 - **Single-Step Form:** Name, email, company, message — validated client-side, POSTed to Apps Script.
 - **Zero Backend Cost:** Google Sheets + Apps Script free tier, no server to maintain.
-- **Static-First:** Astro ships zero JS by default, only the form script hydrates.
+- **Static-First:** Astro ships zero JS by default; only the form script hydrates.
 - **Fully Responsive:** Mobile (375 px), tablet (768 px), desktop (1440 px).
 - **SEO-Ready:** Meta tags, Open Graph, Twitter card, robots.txt, canonical URL.
 - **Accessible:** Semantic landmarks, labeled inputs, `aria-live` form status.
@@ -50,25 +50,25 @@ The site is delivered as a **static, CDN-hosted build** via Astro and Tailwind C
 
 The website is built using a modern, static-first approach:
 
-1. **Framework:** Astro 4 for Static Site Generation (SSG) ensuring ultra-fast load times.
+1. **Framework:** Astro 4 for Static Site Generation (SSG), ensuring ultra-fast load times.
 2. **Styling:** Tailwind CSS 3.4 with utility-first classes, purged for production.
 3. **Interactivity:** One client-side script (`form.ts`) handles validation and submission — no React, no hydration overhead.
-4. **Backend:** Google Apps Script Web App receives JSON, appends rows to Google Sheets.
+4. **Backend:** Google Apps Script Web App receives JSON and appends rows to Google Sheets.
 5. **Verification:** Read-only Python toolchain (`verify_*.py`) checks 5 phases without writing to disk.
 6. **Deployment:** Static hosting on Vercel or Netlify with Git-based atomic deploys.
 
 ## Tech Stack
 
-| Component | Technology |
-| :--- | :--- |
-| Framework | Astro 4.x |
-| Styling | Tailwind CSS 3.4 |
-| Forms | Google Apps Script (Web App) |
-| Lead Store | Google Sheets |
-| Hosting | Vercel / Netlify (static) |
-| Analytics | Google Analytics 4 (optional) |
-| Verification | Python 3.9+ toolchain |
-| Fonts | System font stack (zero external requests) |
+| Component    | Technology                                |
+| :----------- | :---------------------------------------- |
+| Framework    | Astro 4.x                                 |
+| Styling      | Tailwind CSS 3.4                          |
+| Forms        | Google Apps Script (Web App)              |
+| Lead Store   | Google Sheets                             |
+| Hosting      | Vercel / Netlify (static)                 |
+| Analytics    | Google Analytics 4 (optional)             |
+| Verification | Python 3.9+ toolchain                     |
+| Fonts        | System font stack (zero external requests)|
 
 ## Project Structure
 
@@ -84,10 +84,7 @@ The website is built using a modern, static-first approach:
 │   └── styles/            # global.css (Tailwind directives)
 ├── apps-script/           # Code.gs (doPost handler) + appsscript.json
 ├── screenshots/           # Verification screenshots (after deploy)
-├── verification/          # Verification log
-├── setup_project.py       # Scaffolder (idempotent, dry-run supported)
-├── structure.py           # Tree viewer (read-only)
-└── verify_*.py            # Verifiers (core + 5 phases, read-only)
+
 ```
 
 ## Quick Start
@@ -128,13 +125,13 @@ python verify_all.py             # consolidated summary with per-phase verdicts
 python structure.py              # structure tree (excludes node_modules, dist, caches)
 ```
 
-| Phase | Scope | When it passes |
-|-------|-------|----------------|
-| 1 | Setup | After `npm install` + Apps Script deployed |
-| 2 | Build | After all `.astro`, `.ts`, `.css` files are filled in |
-| 3 | Quality | After favicon, robots, OG image, hero visual are added |
-| 4 | Deployment | After `npm run build` (produces `dist/`) |
-| 5 | Handoff | After screenshots + verification log are complete |
+| Phase | Scope      | When it passes                                                |
+| ----- | ---------- | ------------------------------------------------------------- |
+| 1     | Setup      | After `npm install` + Apps Script deployed                    |
+| 2     | Build      | After all `.astro`, `.ts`, `.css` files are filled in         |
+| 3     | Quality    | After favicon, robots, OG image, hero visual are added        |
+| 4     | Deployment | After `npm run build` (produces `dist/`)                      |
+| 5     | Handoff    | After screenshots + verification log are complete             |
 
 ## Documentation
 

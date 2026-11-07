@@ -1,0 +1,52 @@
+---
+// src/pages/contact.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout
+  title="Contact Us — Product"
+  description="Get in touch with the Product team. We'd love to hear from you."
+>
+  <Navbar />
+  <main class="mx-auto max-w-2xl px-4 py-16 md:py-24">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">Contact Us</h1>
+      <p class="mt-4 text-lg text-slate-600">
+        Have a question? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+      </p>
+    </div>
+
+    <!-- Form Kontak (Menggunakan ID berbeda agar tidak bentrok dengan LeadForm) -->
+    <form id="contact-form-el" class="space-y-4" novalidate>
+      <div>
+        <label for="contact-name" class="mb-2 block text-sm font-medium text-slate-700">Name</label>
+        <input id="contact-name" name="name" required placeholder="Jane Doe"
+          class="w-full rounded-lg border border-slate-300 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" />
+      </div>
+      
+      <div>
+        <label for="contact-email" class="mb-2 block text-sm font-medium text-slate-700">Email</label>
+        <input id="contact-email" name="email" type="email" required placeholder="you@company.com"
+          class="w-full rounded-lg border border-slate-300 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20" />
+      </div>
+      
+      <div>
+        <label for="contact-message" class="mb-2 block text-sm font-medium text-slate-700">Message</label>
+        <textarea id="contact-message" name="message" rows="4" required placeholder="How can we help you?"
+          class="w-full resize-y rounded-lg border border-slate-300 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"></textarea>
+      </div>
+
+      <!-- Honeypot -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
+      <button type="submit"
+        class="w-full rounded-lg bg-brand-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-brand-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2">
+        Send Message
+      </button>
+      
+      <p id="contact-status" class="text-sm font-medium text-center" aria-live="polite"></p>
+    </form>
+  </main>
+  <Footer />
+</BaseLayout>
