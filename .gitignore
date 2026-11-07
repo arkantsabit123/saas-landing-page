@@ -1,0 +1,183 @@
+# ============================================
+# Node / Astro / Tailwind
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Astro build output
+dist/
+.astro/
+build/
+out/
+
+# Astro cache
+.vercel/
+.netlify/
+
+# ============================================
+# Environment Variables
+# ============================================
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+.env.production
+.env.staging
+
+# ============================================
+# Python (local only — verification toolchain)
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+.Python
+
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.cache/
+.hypothesis/
+
+*.egg-info/
+*.egg
+.eggs/
+develop-eggs/
+wheels/
+*.whl
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+.python-version
+Pipfile.lock
+poetry.lock
+.pdm.toml
+__pypackages__/
+
+# ============================================
+# LOCAL ONLY — Verification Toolchain
+# ============================================
+# Hide all Python verifier scripts from repo
+verify_*.py
+verify-*.py
+
+# Hide scaffolder & tree viewer
+setup_project.py
+structure.py
+
+# Hide verification folder (keep local)
+verification/
+!verification/.gitkeep
+
+# Hide any local verification reports
+verification_report.txt
+*_verification.json
+phase*_verification.json
+
+# ============================================
+# JSON Files (hidden except project essentials)
+# ============================================
+*.json
+!package.json
+!tsconfig.json
+!appsscript.json
+
+# ============================================
+# Google Apps Script
+# ============================================
+.clasp.json
+.claspignore
+apps-script/.clasprc.json
+apps-script/credentials.json
+
+# ============================================
+# IDE / Editor
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+.vs/
+*.code-workspace
+
+# ============================================
+# OS Generated
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+.directory
+
+# ============================================
+# Logs & Temp Files
+# ============================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.patch
+tmp/
+temp/
+logs/
+
+# ============================================
+# Archive Files
+# ============================================
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+*.xz
+*.gz
+
+# ============================================
+# Security / Credentials
+# ============================================
+*.key
+*.pem
+*.crt
+*.csr
+secrets/
+*.secret
+*.secrets
+credentials.json
+.credentials.json
+*.password
